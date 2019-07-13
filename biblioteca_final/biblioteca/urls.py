@@ -19,14 +19,18 @@ from sistema import views
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls,name='ad'),
     path('sistema/',include('sistema.urls')),
 	#path('libro/',views.LibroView.as_view(), name='libro'), #href="{% url 'libro' %}" --> en el template
-    path('accounts/',include('django.contrib.auth.urls'),name='login'),
+    path('accounts/',include('django.contrib.auth.urls'),name="login"),
     path('register/',views.register,name='register'),
-    path('logout/',views.register,name='logout'),
+    path('logout/',views.logout,name='logout'),
 
     path('', views.origen, name='origen'),
-
-
 ]
+
+
+
+
+
+

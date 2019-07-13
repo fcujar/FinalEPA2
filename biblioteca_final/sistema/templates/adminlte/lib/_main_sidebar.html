@@ -22,7 +22,6 @@
         {% block nav_links_ul %}
         <ul class="sidebar-menu">
             {% block nav_links_outer %}
-            <li class="header">{% block nav_heading %}ALBUM DE FOTOS{% endblock %}</li>
 
             {% block nav_links %}
                 <li>
@@ -72,6 +71,12 @@
 
                 <li>
                     <a href="{% url 'ejemplar' %}">EJEMPLARES
+                        <i class="fa fa-dashboard"></i> <span></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/admin">SI TIENES PERMISOS DE ADMINISTRADOR, CLICKEA AQUI!!!
                         <i class="fa fa-dashboard"></i> <span></span>
                     </a>
                 </li>

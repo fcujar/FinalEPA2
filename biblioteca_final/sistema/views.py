@@ -1,6 +1,5 @@
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render,redirect
-from rest_framework import viewsets
 from .models import Libro, Ejemplar, Prestamo, Multa, Usuario, Editorial, Pais, Autor
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
@@ -56,6 +55,7 @@ def register(request):
     context = {'form':form}
     return render (request,'registration/register.html',context)
 		
+@login_required
 def origen(request):
     return render(request, 'sistema/origen.html')
 

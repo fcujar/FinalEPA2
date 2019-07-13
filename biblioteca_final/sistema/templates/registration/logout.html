@@ -1,8 +1,20 @@
-{% extends "registration/registration_base.html" %}
+{% extends "adminlte/base.html" %}
 {% load i18n %}
 
 {% block title %}{% trans "Logged out" %}{% endblock %}
 
 {% block content %}
-<p>{% trans "Successfully logged out" %}.</p>
+<strong><font size="10" color="green">Successfully logged out</font></strong>
+<div>
+	<a href= "{% url 'register' %}">
+		<font size="5">Regístrate</font>
+
+	</a>
+<div>
+<div>
+	<a href= "{% url 'login' %}">
+		<font size="5">Logueate</font>
+	</a>
+<div>		
+
 {% endblock %}
