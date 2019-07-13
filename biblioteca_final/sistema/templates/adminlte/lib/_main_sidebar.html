@@ -1,0 +1,85 @@
+{% load static %}
+{% load adminlte_helpers %}
+<!-- Left side column. contains the sidebar -->
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+        {% block user_panel %}
+        <div class="user-panel">
+            <div class="pull-left image">
+                <img src=" {% static 'felipe.jpg' %}" size=90 class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+                <p>{% firstof request.user.get_full_name request.user.username %}</p>
+            </div>
+        </div>
+        {% endblock %}
+
+        {% block form %}{% endblock %}
+
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        {% block nav_links_ul %}
+        <ul class="sidebar-menu">
+            {% block nav_links_outer %}
+            <li class="header">{% block nav_heading %}ALBUM DE FOTOS{% endblock %}</li>
+
+            {% block nav_links %}
+                <li>
+                    <a href="{% url 'libro' %}">LIBROS
+                        <i class="fa fa-dashboard"></i> <span></span>
+                    </a>
+                </li>
+                    
+                <li>
+                    <a href="{% url 'autor' %}">AUTORES
+                        <i class="fa fa-dashboard"></i> <span></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'editorial' %}">EDITORIALES
+                        <i class="fa fa-dashboard"></i> <span></span>
+                    </a>
+                </li>    
+
+
+                <li>
+                    <a href="{% url 'pais' %}">PAISES
+                        <i class="fa fa-dashboard"></i> <span></span>
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="{% url 'prestamo' %}">PRESTAMOS
+                        <i class="fa fa-dashboard"></i> <span></span>
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="{% url 'multa' %}">MULTAS
+                        <i class="fa fa-dashboard"></i> <span></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'usuario' %}">USUARIOS
+                        <i class="fa fa-dashboard"></i> <span></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'ejemplar' %}">EJEMPLARES
+                        <i class="fa fa-dashboard"></i> <span></span>
+                    </a>
+                </li>
+
+            {% endblock nav_links %}
+            {% endblock nav_links_outer %}
+        </ul>
+        {% endblock nav_links_ul %}
+    </section>
+    <!-- /.sidebar -->
+</aside>

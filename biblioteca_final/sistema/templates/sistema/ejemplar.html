@@ -1,0 +1,25 @@
+{% extends 'adminlte/base.html' %}
+{% load static %}
+
+{% block section %}
+
+{% endblock section %}
+
+{% block content %}
+	<div>
+	    <font color="blue" size="100">EJEMPLARES DE TU BIBLIOTECA</font>
+	</div>
+
+    {% for o in object_list%}
+	    <font color="red" size="6">Libro Ejemplar:</font><font size="6"> {{o.libros_codlibro}} </font>	    
+	    <br>
+    {% endfor %}
+
+    <div>
+    	<img src="{% static 'ejemplar.jpeg' %}">
+	<div> 
+
+
+
+
+{% endblock content %}

@@ -1,0 +1,24 @@
+{% extends 'adminlte/base.html' %}
+{% load static %}
+
+{% block section %}
+    
+
+
+{% endblock section %}
+
+{% block content %}
+	<div>
+	    <font color="blue" size="100">PAISES CON LOS QUE TRABAJAMOS</font>
+	</div>
+
+    {% for o in object_list%}
+	    <font color="red" size="6">Nombre del país:</font><font size="6"> {{o.nompais}} </font>	       
+	    <br>
+    {% endfor %}
+
+    <div>
+    	<img src="{% static 'pais.jpg' %}">
+	<div> 
+ 
+{% endblock content %}

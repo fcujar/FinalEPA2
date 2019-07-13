@@ -1,0 +1,27 @@
+{% extends 'adminlte/base.html' %}
+{% load static %}
+
+{% block section %}
+    
+
+
+{% endblock section %}
+
+{% block content %}	
+	<div>
+	    <font color="blue" size="100">EDITORIALES RECONOCIDAS</font>
+	</div>
+
+    {% for o in object_list%}
+	    <font color="red" size="6">País de la editorial:</font><font size="6"> {{o.paises_codpais}} </font>
+	    <font color="red" size="6">Ciudad de la editorial:</font><font size="6"> {{o.ciueditorial}} </font>	    
+	    <font color="red" size="6">Nombre de la editorial:</font><font size="6"> {{o.nomeditorial}} </font>	    
+	    <br>
+    {% endfor %}
+    
+    <div>
+    	<img src="{% static 'editorial.png' %}">
+	<div> 
+
+
+{% endblock content %}

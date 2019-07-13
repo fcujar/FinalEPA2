@@ -1,0 +1,27 @@
+{% extends 'adminlte/base.html' %}
+{% load static %}
+
+{% block section %}
+
+{% endblock section %}
+
+{% block content %}	
+	<div>
+	    <font color="blue" size="100">PRESTAMOS REALIZADOS</font>
+	</div>
+
+    {% for o in object_list%}
+	    <font color="red" size="6">Fecha del préstamo:</font><font size="6"> {{o.fecprestamo}} </font>
+	    <font color="red" size="6">Usuario:</font><font size="6"> {{o.usuarios_codusuario}} </font>
+	    <font color="red" size="6">Ejemplar:</font><font size="6"> {{o.ejemplares_codejemplar}} </font>
+	    <font color="red" size="6">Fecha de devolución:</font><font size="6"> {{o.fecdevolucion}} </font>	
+	    <br>
+    {% endfor %}
+
+    <div>
+    	<img src="{% static 'prestamo.png' %}">
+	<div> 
+
+
+
+{% endblock content %}

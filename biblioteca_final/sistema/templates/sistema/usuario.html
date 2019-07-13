@@ -1,0 +1,25 @@
+{% extends 'adminlte/base.html' %}
+{% load static %}
+
+{% block section %}
+    
+ 
+
+{% endblock section %}
+
+{% block content %}
+	<div>
+	    <font color="blue" size="100">USUARIOS REGISTRADOS</font>
+	</div>
+
+    {% for o in object_list%}
+	    <font color="red" size="6">Nombre de Usuario:</font><font size="6"> {{o.nomusuario}} </font>	    
+	    <br>
+    {% endfor %}
+
+    <div>
+    	<img src="{% static 'usuario.jpg' %}">
+	<div> 
+
+
+{% endblock content %}

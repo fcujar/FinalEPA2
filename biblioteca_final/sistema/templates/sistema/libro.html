@@ -1,0 +1,27 @@
+{% extends 'adminlte/base.html' %}
+{% load static %}
+
+{% block section %}
+    texto
+
+{% endblock section %}
+
+{% block content %}
+	<div>
+	    <font color="blue" size="100">LIBROS DE TU BIBLIOTECA</font>
+	</div>
+
+    {% for o in object_list%}
+	    <font color="red" size="6">Nombre de Libro:</font><font size="6"> {{o.nomlibro}} </font>
+	    <font color="red" size="6">Editorial de Libro:</font><font size="6"> {{o.editoriales_codeditorial}} </font>
+	    <font color="red" size="6">Autor de Libro:</font><font size="6"> {{o.autores_codautor}} </font>
+	    <br>
+    {% endfor %}
+
+    <div>
+    	<img src="{% static 'libro.jpeg' %}">
+	<div> 
+   
+{% endblock content %}
+
+
