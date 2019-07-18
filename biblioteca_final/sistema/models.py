@@ -8,11 +8,8 @@ class Libro(models.Model):
     """ Libros  """
     #codlibro = models.CharField(max_length=2, primary_key=True)
     nomlibro = models.CharField(max_length=100)
-<<<<<<< HEAD
-    editoriales_codeditorial= models.ForeignKey('Editorial', on_delete=models.PROTECT,related_name='get_libros')    
-=======
     editoriales_codeditorial= models.ForeignKey('Editorial', on_delete=models.PROTECT,related_name='get_libros')
->>>>>>> Comit final
+    editoriales_codeditorial= models.ForeignKey('Editorial', on_delete=models.PROTECT,related_name='get_libros')
     autores_codautor= models.ManyToManyField('Autor')
 
     class Meta:
@@ -27,11 +24,7 @@ class Autor(models.Model):
     #codautor= models.CharField(max_length=2 , primary_key=True)
     nomautor= models.CharField(max_length=100) #Varchar
     paises_codpais= models.ForeignKey('Pais',on_delete=models.PROTECT,related_name='get_autores')
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> Comit final
     class Meta:
         verbose_name_plural = "Autores"
 
@@ -42,11 +35,8 @@ class Ejemplar(models.Model):
     """ Ejemplares """
     #codejemplar=models.CharField(max_length=2, primary_key=True)
     estejemplar=models.CharField(max_length=1)
-<<<<<<< HEAD
-    libros_codlibro = models.ForeignKey('Libro', on_delete=models.PROTECT,related_name='get_ejemplares' ) 
-=======
     libros_codlibro = models.ForeignKey('Libro', on_delete=models.PROTECT,related_name='get_ejemplares' )
->>>>>>> Comit final
+    libros_codlibro = models.ForeignKey('Libro', on_delete=models.PROTECT,related_name='get_ejemplares' )
 
     class Meta:
         verbose_name_plural = "Ejemplares"
@@ -57,22 +47,16 @@ class Ejemplar(models.Model):
 class Prestamo(models.Model):
     """ Préstamos """
     fecprestamo=models.DateField(auto_now_add=True)
-<<<<<<< HEAD
-    usuarios_codusuario = models.ForeignKey('Usuario', on_delete=models.PROTECT,related_name='get_prestamos1') 
-=======
     usuarios_codusuario = models.ForeignKey('Usuario', on_delete=models.PROTECT,related_name='get_prestamos1')
->>>>>>> Comit final
+    usuarios_codusuario = models.ForeignKey('Usuario', on_delete=models.PROTECT,related_name='get_prestamos1')
     ejemplares_codejemplar = models.ForeignKey('Ejemplar', on_delete=models.PROTECT,related_name='get_prestamos2')
     fecdevolucion=models.DateField(auto_now_add=True)
     fecentrega=models.DateField(auto_now_add=True)
 
     class Meta:
         verbose_name_plural = "Prestamos"
-<<<<<<< HEAD
-     
-=======
 
->>>>>>> Comit final
+
     #def __str__(self):
     #    return self.ejemplares_codejemplar
 
@@ -81,19 +65,16 @@ class Multa(models.Model):
 
     """ Multas """
     fecha=models.DateField(auto_now_add=True)
-<<<<<<< HEAD
     valor= models.DecimalField(max_digits=6, decimal_places=5)
     estado= models.CharField(max_length=2)
     detalle= models.CharField(max_length=100) #Varchar
-    prestamos_ejemplares_codejemplar = models.ForeignKey('Prestamo', on_delete=models.PROTECT,related_name='get_multas1' ) 
-    prestamos_usuarios_codusuario = models.ForeignKey('Prestamo', on_delete=models.PROTECT,related_name='get_multas2' ) 
-=======
+    prestamos_ejemplares_codejemplar = models.ForeignKey('Prestamo', on_delete=models.PROTECT,related_name='get_multas1' )
+    prestamos_usuarios_codusuario = models.ForeignKey('Prestamo', on_delete=models.PROTECT,related_name='get_multas2' )
     valor= models.CharField(max_length=100)
     estado= models.CharField(max_length=2)
     detalle= models.CharField(max_length=100) #Varchar
     prestamos_ejemplares_codejemplar = models.ForeignKey('Prestamo', on_delete=models.PROTECT,related_name='get_multas1' )
     prestamos_usuarios_codusuario = models.ForeignKey('Prestamo', on_delete=models.PROTECT,related_name='get_multas2' )
->>>>>>> Comit final
     prestamos_fecprestamo = models.ForeignKey('Prestamo', on_delete=models.PROTECT,related_name='get_multas3' )
 
     class Meta:
@@ -107,11 +88,7 @@ class Usuario(models.Model):
     #codusuario= models.CharField(max_length=2 , primary_key=True)
     nomusuario= models.CharField(max_length=100) #Varchar
     tipousuario= models.CharField(max_length=2)
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> Comit final
     class Meta:
         verbose_name_plural = "Usuarios"
 
@@ -124,11 +101,10 @@ class Editorial(models.Model):
     paises_codpais=models.ForeignKey('Pais',on_delete=models.PROTECT,related_name='get_editoriales')
     nomeditorial= models.CharField(max_length=100) #Varchar
     ciueditorial= models.CharField(max_length=100) #Varchar
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> Comit final
+
+
+
     class Meta:
         verbose_name_plural = "Editoriales"
 
@@ -139,18 +115,9 @@ class Pais(models.Model):
     """ Paises """
     #codpais= models.CharField(max_length=2 , primary_key=True)
     nompais=models.CharField(max_length=100)
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> Comit final
     class Meta:
         verbose_name_plural = "Paises"
 
     def __str__(self):
         return self.nompais
-<<<<<<< HEAD
-
-
-=======
->>>>>>> Comit final

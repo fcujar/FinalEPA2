@@ -6,12 +6,10 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.urls import reverse_lazy
 from django.contrib.auth.forms import UserCreationForm
-<<<<<<< HEAD
 from django.views.generic import ListView, DetailView
-=======
+
 from django.views.generic import ListView, DetailView, CreateView
 from sistema.forms import *
->>>>>>> Comit final
 
 
 class LibroView(LoginRequiredMixin,ListView):
@@ -59,19 +57,13 @@ def register(request):
         form = UserCreationForm()
     context = {'form':form}
     return render (request,'registration/register.html',context)
-<<<<<<< HEAD
-		
-=======
 
->>>>>>> Comit final
 @login_required
 def origen(request):
     return render(request, 'sistema/origen.html')
 
 def logout(request):
 	return render (request,'registration/logout.html')
-<<<<<<< HEAD
-=======
 
 
 ###################################LO NUEVO
@@ -124,4 +116,3 @@ class AutorCreate(LoginRequiredMixin,CreateView):
 	form_class=AutorForm
 	template_name='sistema/autorCreate.html'
 	succes_url=reverse_lazy('autorCreate')
->>>>>>> Comit final

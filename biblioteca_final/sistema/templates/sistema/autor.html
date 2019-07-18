@@ -2,27 +2,26 @@
 {% load static %}
 
 {% block section %}
-<<<<<<< HEAD
     
 
 
 {% endblock section %}
 
-{% block content %}	
+{% block content %}
 	<div>
 	    <font color="blue" size="100">AUTORES RECONOCIDOS!</font>
 	</div>
 
     {% for o in object_list%}
 	    <font color="red" size="6">Nombre del autor:</font><font size="6"> {{o.nomautor}} </font>
-	    <font color="red" size="6">Nombre del país:</font><font size="6"> {{o.paises_codpais}} </font>	       
+	    <font color="red" size="6">Nombre del país:</font><font size="6"> {{o.paises_codpais}} </font>
 	    <br>
     {% endfor %}
 
     <div>
     	<img src="{% static 'autor.png' %}">
-	<div> 
-=======
+	<div>
+
 
 {% endblock section %}
 
@@ -39,6 +38,5 @@
   <div>
   	<img src="{% static 'autor.png' %}">
   </div>
->>>>>>> Comit final
 
 {% endblock content %}
