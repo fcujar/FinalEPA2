@@ -1,0 +1,32 @@
+{% extends 'adminlte/base.html' %}
+
+{% block content %}
+
+<!--<form method="POST">
+	<div class="form-group label-floating">
+		<label class="form-control-static">Fecha realizacion prestamo</label>
+		{% csrf_token %}
+		{{form.fecprestamo}}
+	</div>
+
+	<div class="form-group label-floating">
+		<label class="form-control-static">Fecha devolucion libro</label>
+		{% csrf_token %}
+		{{form.fecdevolucion}}
+	</div>
+
+	<div class="form-group label-floating">
+		<label class="form-control-static">Fecha entrega libro</label>
+		{% csrf_token %}
+		{{form.fecentrega}}
+	</div>
+
+	<button type="submit">Enviar datos</button>
+</form>
+-->
+<form method="POST">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<button type="submit">Enviar datos</button>
+</form>
+{% endblock content %}

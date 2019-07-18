@@ -1,0 +1,19 @@
+{% extends 'adminlte/base.html' %}
+
+{% block content %}
+
+<!--<form method="POST">
+	<div class="form-group label-floating">
+		<label class="control-label">Estado del Ejemplar(0 No disponible- 1 Disponible):</label>
+		{% csrf_token %}
+		{{form.estejemplar}}
+	</div>
+	<button type="submit">Enviar datos</button>
+</form>
+-->
+<form method="POST">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<button type="submit">Enviar datos</button>
+</form>
+{% endblock content %}
