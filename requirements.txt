@@ -1,4 +1,4 @@
-Django==2.2.2
+Django==2.2.24
 django-adminlte2==0.4.1
 django-registration-redux==2.6
 djangorestframework==3.9.4
